@@ -1,0 +1,9 @@
+version: '2'
+services:
+  redis:
+    image: redis
+    volumes:
+      - ./src/main/resources/database/redis/dаta:/root/redis
+      - ./src/main/resources/database/redis/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"
